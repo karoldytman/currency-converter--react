@@ -1,7 +1,22 @@
 import "./style.css";
+import { useState } from "react";
+import { currencies } from "../currencies";
 
-const Form = () => {
-    <form>
+const Form = ({ result, claculateExchange }) => {
+    const [currency, setCurrency] = useState(currency[0]);
+    const [amount, setAmont] = useState("");
+
+const onFormSubmit = (event) => {
+    event.preventDefoult();
+    claculateExchange(amount, currency);
+};
+const onChangeCurrency = ({ target }) => {
+const selectCurrency = currencies.find(currency => currency.name === target.value);
+setCurrency(selectCurrency);
+};
+
+return (
+    <form onSubmit={onFormSubmit}>
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Przelicz waluty
                 </legend>
@@ -16,10 +31,7 @@ const Form = () => {
                     <label><span className="form__labelText">
                             Wybierz walutę:</span> <select className="form__field form__field--select"
                             name="waluta">
-                            <option className="js-EUR" value="4.7214" selected>EUR </option>
-                            <option className="js-GBP" value="4.4236">GBP</option>
-                            <option className="js-USD" value="4.4589">USD</option>
-
+                           
                         </select>
                     </label>
                 </p>
@@ -28,6 +40,7 @@ const Form = () => {
             </fieldset>
             <p className="form__paragraph"> Pola oznaczone * są wymagane</p>
         </form>
+)
 };
 
 export default Form; 
