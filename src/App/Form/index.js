@@ -3,19 +3,19 @@ import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
 
-export const Form = ({ result, calculateResult, }) => {
+export const Form = ({ calculateResult, result }) => {
     const [currency, setCurrency] = useState(currencies[0].short);
     const [amount, setAmount] = useState("");
 
 const onFormSubmit = (event) => {
     event.preventDefault();
-    calculateResult(amount, currency);
-};
+    calculateResult(currency, amount);
+}
 
 const onFormReset = () => {
     setAmount("");
     setCurrency(currencies[0].short);
-};
+}
 
 return (
     <form onSubmit={onFormSubmit} onReset={onFormReset}>
@@ -46,8 +46,8 @@ return (
                             className="form__field form__field--select"
                             value={currency}
                             onChange={({ target }) => setCurrency(target.value)}>
-                            {currencies.map(currency => (<option key={currency.short} 
-                            value={currency.short}>{currency.name}</option>))};
+                            {currencies.map((currency => (<option key={currency.short} 
+                            value={currency.short}>{currency.name}</option>)))}
                             </select>
                     </label>
                 </p>
@@ -59,10 +59,9 @@ return (
                 <button className="form__button" type="reset">Wyczyść</button>
             </fieldset>
             <p className="form__paragraph"> Pola oznaczone * są wymagane</p>
-            <p className="footer__header footer__header--wshortth">Kwota po przeliczeniu:
-        </p>
+            <Result resutl={result} />
         <p className="footer__paragraph">Aktualny kurs z dnia 08-12-2022r.</p>
-        <Result resutl={result} />
+        
         </form>
     
 )

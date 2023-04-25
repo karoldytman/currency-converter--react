@@ -6,7 +6,7 @@ import { currencies } from "./currencies";
 
 function App() {
 
-  const [result, setResult] = useState(null);
+  const [result, setResult ] = useState();
 
   const calculateResult = (currency, amount) => {
     const rate = currencies
@@ -18,7 +18,7 @@ function App() {
       currency,
     });
  
-  };
+  }
   
   return (
 
@@ -27,7 +27,6 @@ function App() {
         
         <Form result={result} 
         calculateResult={calculateResult} 
-        
         />
     </Container>
   );
