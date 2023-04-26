@@ -25,6 +25,9 @@ Page gives you the ability to convert money from PLN into following currencies
 - JavaScript
 - BEM
 - ES6
+- Immutability
+- Node.js
+- React
 
 ### `npm start`
 
