@@ -1,7 +1,7 @@
 import "./style.css";
 import { useState } from "react";
 import { currencies } from "../currencies";
-import { Result } from "./Result";
+import Result from "./Result";
 
 export const Form = ({ calculateResult, result }) => {
     const [currency, setCurrency] = useState(currencies[0].short);
@@ -59,7 +59,8 @@ return (
                 <button className="form__button" type="reset">Wyczyść</button>
             </fieldset>
             <p className="form__paragraph"> Pola oznaczone * są wymagane</p>
-            <Result resutl={result} />
+
+            <Result result={result} />
         <p className="footer__paragraph">Aktualny kurs z dnia 08-12-2022r.</p>
         
         </form>

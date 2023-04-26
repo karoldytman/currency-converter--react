@@ -1,14 +1,15 @@
 import "./style.css";
-export const Result = ({ result }) => (
+ const Result = ({ result }) => (
    <p className="result"> 
    Kwota po przeliczeniu:
     {result !== undefined && (
         <>
-        {result.sourceAmount.toFixed(2)}&nbsc;PLN&nbsc;=&nbsc;
         <strong>
-            {result.targetAmount.toFixed(2)}&nbsc;{result.currency}
+            {result.targetAmount.toFixed(2)}{result.currency}
             </strong> 
             </>
              )} 
 </p>
 );
+
+export default Result;
