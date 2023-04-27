@@ -1,10 +1,3 @@
-
-const Container = ({ children }) => (
-    <main className="container">
-        {children}
-    
-    </main>
-    
-);
+const Container = ({ children }) => <main>{children}</main>;
 
 export default Container;
