@@ -2,13 +2,11 @@
     font-size: 18px;
     border: 5px solid rgb(3, 174, 117);
     border-radius: 5px;
-    padding: 20px;
-    margin: 20px;
     background-color: rgb(241, 249, 255);
 }
 
 .form__legend {
-    padding: 20px 30px;
+    padding: 10px 30px;
     background-color: rgb(3, 174, 117);
     border-radius: 50px 50px 50px 50px;
     font-size: 22px;
@@ -57,9 +55,12 @@
 }
 
 .form__paragraph {
-    margin-left: 72%;
+    margin-left: 55%;
     font-style: italic;
     font-weight: bold;
+    border: 2px solid green;
+    border-radius: 50px;
+    background-color: rgb(202, 245, 222);
 }
 .footer__header {
     color: rgb(3, 174, 117);
@@ -78,7 +79,10 @@
 }
 
 .footer__paragraph {
-    margin: 1% 0% 12% 70%;
+    margin: -7% 0% 12% 50%;
     font-style: italic;
     font-weight: bold;
+    border: 2px solid green;
+    border-radius: 50px;
+    background-color: rgb(202, 245, 222);
 }
