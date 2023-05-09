@@ -12,7 +12,7 @@ Page gives you the ability to convert money from PLN into following currencies
 1. Enter the amount in PLN
 2. Choose a currency
 3. Press the recalculate button
-<img src="https://github.com/karoldytman/currency-converter/blob/main/image/Animation.gif">
+<img src="https://github.com/karoldytman/currency-converter--react/blob/main/AnimationCurrency-converter.gif">
 
 ## Carrent exchange rate of the day (08-12-2022r.)
 - EUR - 4.7214 PLN
