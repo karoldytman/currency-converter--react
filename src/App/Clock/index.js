@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./style.css";
+import { ClockStyled } from "./styled";
 const Clock = () => {
   const time = new Date().toLocaleTimeString();
   const [currentTime, setCurrentTime] = useState(time);
@@ -9,21 +9,21 @@ const Clock = () => {
   const updateTime = () => {
     const time = new Date().toLocaleTimeString();
     setCurrentTime(time);
-  }
+  };
 
   setInterval(updateTime, 1000);
 
   const updateDate = () => {
     const date = new Date().toLocaleDateString();
     setCurrentDate(date);
-  }
+  };
   setInterval(updateDate);
 
   return (
-    <div className="clock">
-    Data: {currentDate}r. Godzina: {currentTime}
-    </div>
-  )
-}
+    <ClockStyled>
+      Data: {currentDate}r. Godzina: {currentTime}
+    </ClockStyled>
+  );
+};
 
 export default Clock;

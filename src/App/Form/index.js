@@ -1,9 +1,18 @@
-import "./style.css";
+import {
+  FormFieldset,
+  FormLegend,
+  LabelText,
+  FormField,
+  FormSelect,
+  FormButton,
+  Paragraph,
+  Footer,
+} from "./styled";
 import { useState } from "react";
 import { currencies } from "../currencies";
 import Result from "./Result";
 
-  const Form = ({ calculateResult, result }) => {
+const Form = ({ calculateResult, result, setResult }) => {
   const [currency, setCurrency] = useState(currencies[0].short);
   const [amount, setAmount] = useState("");
 
@@ -12,23 +21,27 @@ import Result from "./Result";
     calculateResult(currency, amount);
   };
 
+  const resetResult = () => {
+    setResult();
+  };
+
   const onFormReset = () => {
     setAmount("");
     setCurrency(currencies[0].short);
+    resetResult();
   };
 
   return (
     <form onSubmit={onFormSubmit} onReset={onFormReset}>
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Przelicz waluty</legend>
+      <FormFieldset>
+        <FormLegend>Przelicz waluty</FormLegend>
         <p>
           <label>
-            <span className="form__labelText">Kwota do przeliczenia*</span>
-            <input
+            <LabelText>Kwota do przeliczenia*</LabelText>
+            <FormField
               value={amount}
               onChange={({ target }) => setAmount(target.value)}
               placeholder="Wpisz kwote"
-              className="form__field"
               type="number"
               step="0.01"
               required
@@ -38,9 +51,8 @@ import Result from "./Result";
         </p>
         <p>
           <label>
-            <span className="form__labelText">Wybierz walutę:</span>
-            <select
-              className="form__field form__field--select"
+            <LabelText>Wybierz walutę:</LabelText>
+            <FormSelect
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
@@ -49,19 +61,17 @@ import Result from "./Result";
                   {currency.name}
                 </option>
               ))}
-            </select>
+            </FormSelect>
           </label>
         </p>
-        <button className="form__button">Przelicz</button>
+        <FormButton>Przelicz</FormButton>
 
-        <button className="form__button" type="reset">
-          Wyczyść
-        </button>
-      </fieldset>
-      <p className="form__paragraph"> Pola oznaczone * są wymagane</p>
+        <FormButton type="reset">Wyczyść</FormButton>
+      </FormFieldset>
+      <Paragraph> Pola oznaczone * są wymagane</Paragraph>
 
       <Result result={result} />
-      <p className="footer__paragraph">Aktualny kurs z dnia 08-12-2022r.</p>
+      <Footer>Aktualny kurs z dnia 08-12-2022r.</Footer>
     </form>
   );
 };

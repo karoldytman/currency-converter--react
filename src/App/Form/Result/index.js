@@ -1,6 +1,6 @@
-import "./style.css";
+import { ResultStyled } from "./styled";
 const Result = ({ result }) => (
-  <p className="result">
+  <ResultStyled>
     Kwota po przeliczeniu:
     {result !== undefined && (
       <>
@@ -10,7 +10,7 @@ const Result = ({ result }) => (
         </strong>
       </>
     )}
-  </p>
+  </ResultStyled>
 );
 
 export default Result;
