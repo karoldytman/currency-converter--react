@@ -23,7 +23,10 @@ function App() {
       <Clock />
       <Header title="Kalkulator walut" />
 
-      <Form result={result} calculateResult={calculateResult} />
+      <Form 
+      result={result} 
+      calculateResult={calculateResult} 
+      setResult={setResult}/>
     </Container>
   );
 }
