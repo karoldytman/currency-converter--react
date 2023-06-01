@@ -19,7 +19,7 @@ Page gives you the ability to convert money from PLN into following currencies
 3. Press the recalculate button
 <img src="https://github.com/karoldytman/currency-converter--react/blob/main/AnimationCurrency-converter.gif">
 
-## 🌍Carrent exchange rate of the day (08-12-2022r.)
+## 🌍💱Carrent exchange rate of the day (08-12-2022r.)
 - EUR - 4.7214 PLN
 - GBP - 4.4236 PLN
 - USD - 4.4589 PLN
@@ -34,6 +34,9 @@ Page gives you the ability to convert money from PLN into following currencies
 - Node.js
 - React
 
+## 😃Do not forget to see my homepage ❕
+   ⏯️ https://github.com/karoldytman 👀☕
+   
 ### `npm start`
 
 Runs the app in the development mode.\
