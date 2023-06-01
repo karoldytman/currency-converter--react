@@ -1,5 +1,5 @@
 ### `Demo`
-https://karoldytman.github.io/currency-converter--react/
+:point_right: https://karoldytman.github.io/currency-converter--react/ :point_left:
 
 ## Discrtiption
 
