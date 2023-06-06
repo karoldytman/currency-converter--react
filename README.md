@@ -1,25 +1,30 @@
-### `Demo`
-https://karoldytman.github.io/currency-converter--react/
+# Currency Converter with YouCode!
 
-## Discrtiption
+## 💲 Easy to use Currency-converter 💵
+
+## 🛠️ My work💪
+
+:point_right: https://karoldytman.github.io/currency-converter--react/ :point_left:
+
+## 📇 Discription 📖
 
 Page gives you the ability to convert money from PLN into following currencies
-- EUR
-- GBP
-- USD
+- 💶 EUR 
+- 💸 GBP
+- 💵 USD
 
-## How to use a corrency converter?
+## 🤔How to use a corrency converter❔
 1. Enter the amount in PLN
 2. Choose a currency
 3. Press the recalculate button
 <img src="https://github.com/karoldytman/currency-converter--react/blob/main/AnimationCurrency-converter.gif">
 
-## Carrent exchange rate of the day (08-12-2022r.)
+## 🌍💱Carrent exchange rate of the day (08-12-2022r.)
 - EUR - 4.7214 PLN
 - GBP - 4.4236 PLN
 - USD - 4.4589 PLN
 
-## Tools used in the project
+## ⚙️Tools used in the project
 - HTML
 - CSS
 - JavaScript
@@ -29,6 +34,9 @@ Page gives you the ability to convert money from PLN into following currencies
 - Node.js
 - React
 
+## 😃Do not forget to see my homepage ❕
+   ⏯️ https://github.com/karoldytman 👀☕
+   
 ### `npm start`
 
 Runs the app in the development mode.\
