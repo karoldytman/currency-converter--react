@@ -1,9 +1,7 @@
-
 export const theme = {
-    color: {
+  color: {
     green: "#03ae75",
     title: "#caf5de",
     white: "#fff",
-
-    },
+  },
 };
