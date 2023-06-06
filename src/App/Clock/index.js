@@ -1,27 +1,13 @@
-import { useState } from "react";
 import { ClockStyled } from "./styled";
+import { useClock } from "./useClock"
+
+const CurrentDate = (date) => date.toLocaleString();
+
 const Clock = () => {
-  const time = new Date().toLocaleTimeString();
-  const [currentTime, setCurrentTime] = useState(time);
-  const date = new Date().toLocaleDateString();
-  const [currentDate, setCurrentDate] = useState(date);
-
-  const updateTime = () => {
-    const time = new Date().toLocaleTimeString();
-    setCurrentTime(time);
-  };
-
-  setInterval(updateTime, 1000);
-
-  const updateDate = () => {
-    const date = new Date().toLocaleDateString();
-    setCurrentDate(date);
-  };
-  setInterval(updateDate);
-
+const date = useClock();
   return (
     <ClockStyled>
-      Data: {currentDate}r. Godzina: {currentTime}
+      Data: {CurrentDate(date)}
     </ClockStyled>
   );
 };
